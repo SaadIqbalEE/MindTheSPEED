@@ -1,0 +1,223 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="37D%BOu[37q}8zmZLy|)" x="27" y="41">
+    <mutation>
+      <arg name="Screen"></arg>
+    </mutation>
+    <field name="NAME">procedure</field>
+    <field name="VAR0">Screen</field>
+    <statement name="STACK">
+      <block type="controls_if" id="%JsAg@Fw{ke{2OSjYZ$I">
+        <value name="IF0">
+          <block type="logic_boolean" id="AsI8eL#WEtQ29#XnX!P^">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id=".Ymi/06{N@)|O*n;VWg6">
+            <value name="SCREEN">
+              <block type="lexical_variable_get" id="*a7?8Y*#0;9o-zeqK5,7">
+                <field name="VAR">Screen</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="L!~IuLCHHQWB!7Qc+=[i"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="2+l]w,4l+lqZnIMN{RzG" x="354" y="156">
+    <mutation component_type="Button" instance_name="Quit" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Quit</field>
+    <statement name="DO">
+      <block type="component_method" id="T=qIBJf|)e=w$Pv5SK|n">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="quiting"></mutation>
+        <field name="COMPONENT_SELECTOR">quiting</field>
+        <value name="ARG0">
+          <block type="text" id="43ZY!*.{3cVeh?8^s|FJ">
+            <field name="TEXT">Do you really want to quit?</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="1[c98ZS6mPjcKuhxqFAi">
+            <field name="TEXT">MindTheSPEED</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="g|Jq}w)}mUN_nI/_*$04">
+            <field name="TEXT">YES</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="[^k_~k%KdMr~70QQJsrk">
+            <field name="TEXT">NO</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="D+~!u{PP0O$XiDjc+AhF">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="rx:+A)cT_,HZYK^,N,@3" x="29" y="200">
+    <mutation component_type="Button" instance_name="Start" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Start</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="=coVgt1P%zjn*;rm9F/2" inline="false">
+        <mutation name="procedure">
+          <arg name="Screen"></arg>
+        </mutation>
+        <field name="PROCNAME">procedure</field>
+        <value name="ARG0">
+          <block type="text" id="jbS$~g+B/ib*SGK6s=#/">
+            <field name="TEXT">Start</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="8}T(I;s$D9j^mZu0*[_$" x="22" y="317">
+    <mutation component_type="Button" instance_name="Credits" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Credits</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="UjCX)e_fDjKx(iWKi_/P" inline="false">
+        <mutation name="procedure">
+          <arg name="Screen"></arg>
+        </mutation>
+        <field name="PROCNAME">procedure</field>
+        <value name="ARG0">
+          <block type="text" id="1eeY}+LR8`hW}VhsSLX/">
+            <field name="TEXT">Credits</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="%sw2izXkWRmfs%-3]Ofz" x="18" y="430">
+    <mutation component_type="Notifier" instance_name="quiting" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">quiting</field>
+    <statement name="DO">
+      <block type="controls_if" id="c9izj};+F)$gY`QBN()[">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="m04agfTDz{[9|an.O-+C">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="^#0fWh${#0N63Ns-x)*N">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="ZE`;S9Jm1;C-z(c-TmH^">
+                <field name="TEXT">YES</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_closeApplication" id="G^}@|yu(3g^3KFi70uTq"></block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="pacDMJc0Iwy=RC1oSB][">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="3m.]L*T9/1*,!/Cf+rW6">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="v_1|rE+_BL.0*,dwQlu1">
+                <field name="TEXT">NO</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="procedures_callnoreturn" id="K^!]AEmjmt=2g`_;:57u" inline="false">
+            <mutation name="procedure">
+              <arg name="Screen"></arg>
+            </mutation>
+            <field name="PROCNAME">procedure</field>
+            <value name="ARG0">
+              <block type="text" id=",qn4H3:w[/`yg(m7cB40">
+                <field name="TEXT">MainMenu</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="I+uNl-LDZ}qcXUyaUY3;" x="20" y="699">
+    <mutation component_type="Form" instance_name="MainMenu" event_name="ErrorOccurred"></mutation>
+    <field name="COMPONENT_SELECTOR">MainMenu</field>
+    <statement name="DO">
+      <block type="component_method" id="EX{OQbarSod6o^2K_M79">
+        <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text_join" id="u]JN_`l9|#Vrzo_;m#NC">
+            <mutation items="7"></mutation>
+            <value name="ADD0">
+              <block type="lexical_variable_get" id="[(L@`6?ScxoG%_9,dt+!">
+                <mutation>
+                  <eventparam name="component"></eventparam>
+                </mutation>
+                <field name="VAR">component</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="QOe`unDCyss*t3V*Ee6w">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="lexical_variable_get" id="l1e?5GSl/G`Z?6+eG1uK">
+                <mutation>
+                  <eventparam name="functionName"></eventparam>
+                </mutation>
+                <field name="VAR">functionName</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id="]9KjNgdt55e8Nj2`DK_4">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="lexical_variable_get" id="58=wZD5?T_16OSk`B.#j">
+                <mutation>
+                  <eventparam name="errorNumber"></eventparam>
+                </mutation>
+                <field name="VAR">errorNumber</field>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="text" id="Mx7VFx2RDw0)|G*H|Pbk">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="lexical_variable_get" id="c,.vs8A%+vv/kGZ^-@]9">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

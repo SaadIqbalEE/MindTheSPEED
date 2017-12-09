@@ -1,0 +1,1290 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="ak9rNe){.tUJ1T%GZOtF" x="43" y="-572">
+    <mutation>
+      <arg name="screen"></arg>
+    </mutation>
+    <field name="NAME">gotoscreen</field>
+    <field name="VAR0">screen</field>
+    <statement name="STACK">
+      <block type="controls_if" id="12ys6Je,qVcsr9vd#sp~">
+        <value name="IF0">
+          <block type="logic_boolean" id="IUx1LGZk(_1YQUn{i@}*">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="}-N@IXaH}S9E`hM?44?*">
+            <value name="SCREEN">
+              <block type="lexical_variable_get" id="Z|:!t=z:7YEclBA8NZW`">
+                <field name="VAR">screen</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="A^:(v~MVLy^YBzmC)mHh"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Z/JLS1HIYn(C1x:^~N}u" x="46" y="-420">
+    <mutation component_type="Button" instance_name="back" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">back</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="v8;yXc-@4/A3I+(,nhav" inline="false">
+        <mutation name="gotoscreen">
+          <arg name="screen"></arg>
+        </mutation>
+        <field name="PROCNAME">gotoscreen</field>
+        <value name="ARG0">
+          <block type="text" id="M*1$)4d7Xu5SvU)D+WWH">
+            <field name="TEXT">MainMenu</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="T!s|}$58]SsRyt9C/xvR" x="45" y="-299">
+    <mutation component_type="Form" instance_name="Start" event_name="ErrorOccurred"></mutation>
+    <field name="COMPONENT_SELECTOR">Start</field>
+    <statement name="DO">
+      <block type="component_method" id="0sKBep;;xY1f$KNAe~`#">
+        <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text_join" id="9CNp(vjRB]P{`BD;Fa;e">
+            <mutation items="7"></mutation>
+            <value name="ADD0">
+              <block type="lexical_variable_get" id="8i^q/#IIe{}n0^Sea`*|">
+                <mutation>
+                  <eventparam name="component"></eventparam>
+                </mutation>
+                <field name="VAR">component</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="5]xwe}AgG?~u[vc]*XuP">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="lexical_variable_get" id="LD];JSfaZMv;6T%d$JiY">
+                <mutation>
+                  <eventparam name="functionName"></eventparam>
+                </mutation>
+                <field name="VAR">functionName</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id="*IwIoUZv|m7+}~y%mG-d">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="lexical_variable_get" id="{R_G5!K.X*G/-hUfMDXb">
+                <mutation>
+                  <eventparam name="errorNumber"></eventparam>
+                </mutation>
+                <field name="VAR">errorNumber</field>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="text" id="kLOtAVv)ENT!3pK}NVWN">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="lexical_variable_get" id="=_6HoJB`J4V3k$3hYs`=">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="5}i5p6Vs#3zxs2AQKKaT" x="45" y="-2">
+    <mutation component_type="Form" instance_name="Start" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Start</field>
+    <statement name="DO">
+      <block type="component_set_get" id="okH$i3(qw2=}M-2+xwkD">
+        <mutation component_type="Slider" set_or_get="set" property_name="ThumbPosition" is_generic="false" instance_name="speed_limit"></mutation>
+        <field name="COMPONENT_SELECTOR">speed_limit</field>
+        <field name="PROP">ThumbPosition</field>
+        <value name="VALUE">
+          <block type="math_number" id="@HdpJ*_6mSm3_(h+7J~l">
+            <field name="NUM">40</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="?hR?O*N3S._.f)]Z]*nj">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Longitude_text"></mutation>
+            <field name="COMPONENT_SELECTOR">Longitude_text</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="[%sYripcr-)xC;w.kn.]">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="mkr:gx%dJl^khA2a|{_W">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Latitude_text"></mutation>
+                <field name="COMPONENT_SELECTOR">Latitude_text</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="ix~;*%SJTQt;+S}1/PIB">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="q*7pLS.C7ISzYWLB(1DA">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Accuracy_text"></mutation>
+                    <field name="COMPONENT_SELECTOR">Accuracy_text</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="k9h6mzkdWka[V3IoGDJ/">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="_C#PQ/)hK4VD1W.854`k">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="speed"></mutation>
+                        <field name="COMPONENT_SELECTOR">speed</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="g^L#R[XwN0kIEhH(y,Su">
+                            <field name="TEXT">-------------</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="*~PAsG1[4x02kX$M?sFo">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="limit_speed_text"></mutation>
+                            <field name="COMPONENT_SELECTOR">limit_speed_text</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="component_set_get" id="b|4R+Y@CBf@./0S]fmsM">
+                                <mutation component_type="Slider" set_or_get="get" property_name="ThumbPosition" is_generic="false" instance_name="speed_limit"></mutation>
+                                <field name="COMPONENT_SELECTOR">speed_limit</field>
+                                <field name="PROP">ThumbPosition</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="LKzST$a[8J[:4Pd_=,N." x="44" y="214">
+    <field name="NAME">Accuracy</field>
+    <value name="VALUE">
+      <block type="math_number" id="}FJj%p!F(HmQ+F}.}r~w">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="9dKV#XDZY,:)sNniIFil" x="495" y="219">
+    <mutation component_type="Button" instance_name="go" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">go</field>
+    <statement name="DO">
+      <block type="controls_if" id="D|#z]U~5O8cToS[A}i-;">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="p,m]fR4-sKoCL-`dxxOq">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="j6Vq6[~(J{fa1x!bl=mp">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="go"></mutation>
+                <field name="COMPONENT_SELECTOR">go</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="yA@@ITYwSG,imI_c{ZYH">
+                <field name="TEXT">GO</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="a_aRi8#RT@dlpTqN?-p$">
+            <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="go"></mutation>
+            <field name="COMPONENT_SELECTOR">go</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="HLZL5r/Ghlkt|I_5Ndk@">
+                <field name="TEXT">STOP</field>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="VBoL|bZGB8TTWf8a!H?T">
+                <field name="VAR">global value_Button</field>
+                <value name="VALUE">
+                  <block type="math_number" id="o5pUA4~[Ry`~R=?vUL`~">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="SGh!/cxPSh*j82o([snV">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="9dN1mWH}XHMCZ)L{g:Tv">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="go"></mutation>
+                <field name="COMPONENT_SELECTOR">go</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="b._C?FYQ0~BR5cS[VF4p">
+                <field name="TEXT">STOP</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="uVcA/T=JxVQ/cRc5b2lR">
+            <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="go"></mutation>
+            <field name="COMPONENT_SELECTOR">go</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="l#d@UJL=j%[|w)$%kNVh">
+                <field name="TEXT">GO</field>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="(r[13l7t|$}|ua(prOch">
+                <field name="VAR">global value_Button</field>
+                <value name="VALUE">
+                  <block type="math_number" id="3nL5$:k$TfhtD;]nDX[w">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="iSD5m]*9BGZKbap~Y=]n" x="44" y="251">
+    <field name="NAME">value_Button</field>
+    <value name="VALUE">
+      <block type="math_number" id="Qf2nRxDVE.CfPK`%y!ge">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="QZ`X+4Y=X~rhN,J1LG^F" x="42" y="289">
+    <field name="NAME">latitude</field>
+    <value name="VALUE">
+      <block type="math_number" id="Qf4Ip66S$L[^7arDl8ZD">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="3*Q5b2NeVjXNcvt*^!!b" x="45" y="331">
+    <field name="NAME">Longitude</field>
+    <value name="VALUE">
+      <block type="math_number" id="DM!L[4pTaSuO8C5jGE5c">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="S+[Ub;GUgzg.Ai$^!@Ik" x="44" y="383">
+    <field name="NAME">Speed</field>
+    <value name="VALUE">
+      <block type="math_number" id="w6HOTd_[e4B9WT7(h,t)">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id=":@N@r|)sNd*8i]v2hf`9" x="43" y="424">
+    <field name="NAME">in_timer</field>
+    <value name="VALUE">
+      <block type="math_number" id="}(HFNwxq:^]u65Q+fiEg">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="~-UXgxj8zC0P7`Llyv$~" x="43" y="459">
+    <field name="NAME">Total_dist</field>
+    <value name="VALUE">
+      <block type="math_number" id=")X|jDa:v+;h$4G24rKEZ">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="NF/vWO`sRS$zrpyyayWZ" x="43" y="498">
+    <field name="NAME">temp_distance</field>
+    <value name="VALUE">
+      <block type="math_number" id="}732RoOTh[hIygB,:eyY">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="Yt;*(;={Quh]9i[_g8bo" x="45" y="532">
+    <field name="NAME">last_long</field>
+    <value name="VALUE">
+      <block type="math_number" id="R|;/%8!T)XL_#qmvU=Y*">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="kaG)^rn9S^j8#`0GuL}|" x="43" y="568">
+    <field name="NAME">last_lat</field>
+    <value name="VALUE">
+      <block type="math_number" id="9Tr%avQ00Jy3V.Kt=Yv5">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="1o8jwYrBby_#,(5M+3=e" x="46" y="605">
+    <field name="NAME">ratio_radius</field>
+    <value name="VALUE">
+      <block type="math_number" id="#:%Qt5Z~6tNqN_WEF(XC">
+        <field name="NUM">0.993305522</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="w]kHjd+k3Isf44ER4)Y9" x="47" y="644">
+    <field name="NAME">E_radius_m</field>
+    <value name="VALUE">
+      <block type="math_number" id="YeP/ZPSpC=O-|QcSG]))">
+        <field name="NUM">6378137</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" id="DE=b_1:p8qwxX69P*Y]I" x="429" y="664">
+    <mutation>
+      <arg name="x"></arg>
+    </mutation>
+    <field name="NAME">square</field>
+    <field name="VAR0">x</field>
+    <value name="RETURN">
+      <block type="math_multiply" id="=,DNiyrB,~t4AUX4!64o">
+        <mutation items="2"></mutation>
+        <value name="NUM0">
+          <block type="lexical_variable_get" id="2Rp*;L=!$3R:e0{M8M]x">
+            <field name="VAR">x</field>
+          </block>
+        </value>
+        <value name="NUM1">
+          <block type="lexical_variable_get" id="5T3!H!_SnPcK1u%y,K`r">
+            <field name="VAR">x</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id=")^bPZ)GYwbxxWczZ0I@+" x="47" y="686">
+    <field name="NAME">P_radius_m</field>
+    <value name="VALUE">
+      <block type="math_number" id="[Vp?3--DRlDJ1[[TE=JF">
+        <field name="NUM">6356752</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="~K2Bi]:RnC/)^uwP%(+I" x="46" y="725">
+    <field name="NAME">E2_radius</field>
+    <value name="VALUE">
+      <block type="math_number" id="@z[6^?A^,T16$l:maYf[">
+        <field name="NUM">40680631.6</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="Jt-9)Q2+mD{i3xY@wzeF" x="49" y="767">
+    <field name="NAME">P2_radius</field>
+    <value name="VALUE">
+      <block type="math_number" id="]El]OUA[m86~jNqhwD`%">
+        <field name="NUM">40408296</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id=":xa$]ysNN=Rd3zC+vND*" x="438" y="764">
+    <field name="NAME">ac_radius</field>
+    <value name="VALUE">
+      <block type="math_number" id=";AtdeP}R[I@=W1-A[H#m">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="J~PvmO@~vEeQFiV.L{/;" x="44" y="802">
+    <mutation component_type="LocationSensor" instance_name="LocationSensor1" event_name="LocationChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="y{H_ogb3i/B!0jV{![Rk">
+        <field name="VAR">global Speed</field>
+        <value name="VALUE">
+          <block type="math_multiply" id=":#?s9VK%{w6u_q1cbKZM">
+            <mutation items="2"></mutation>
+            <value name="NUM0">
+              <block type="lexical_variable_get" id="eB4atDtD;`;)WqesJ06N">
+                <mutation>
+                  <eventparam name="speed"></eventparam>
+                </mutation>
+                <field name="VAR">speed</field>
+              </block>
+            </value>
+            <value name="NUM1">
+              <block type="math_number" id="Hy#4XCe:`+nlDu)K8/P$">
+                <field name="NUM">3.6</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="E8{Kb6]x65u0hT[rU.XP">
+            <field name="VAR">global latitude</field>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="#fydEvs65pUY5Ss$0%@!">
+                <mutation>
+                  <eventparam name="latitude"></eventparam>
+                </mutation>
+                <field name="VAR">latitude</field>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="t8fM(w~@YK%-s[6}nh(5">
+                <field name="VAR">global Longitude</field>
+                <value name="VALUE">
+                  <block type="lexical_variable_get" id="udl98%KkcZ;u5l}rEUmF">
+                    <mutation>
+                      <eventparam name="longitude"></eventparam>
+                    </mutation>
+                    <field name="VAR">longitude</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="YAzl2GFvg;_CkK6tj3Bi">
+                    <field name="VAR">global Accuracy</field>
+                    <value name="VALUE">
+                      <block type="component_set_get" id="NpCFpijy!w0zMatP5QZn">
+                        <mutation component_type="LocationSensor" set_or_get="get" property_name="Accuracy" is_generic="false" instance_name="LocationSensor1"></mutation>
+                        <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+                        <field name="PROP">Accuracy</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="W4()(lS`*_gFq?2uc1A/">
+                        <value name="IF0">
+                          <block type="logic_compare" id=",t4PcB7ou{-db~-9P2Zi">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="It7.{m3JX`g=}ED;=v8(">
+                                <field name="VAR">global loops</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="1X%OTrzM:SXTL]-x9kDC">
+                                <field name="NUM">5</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_if" id=";OLCmgoqj`p5+:BH(6M$">
+                            <value name="IF0">
+                              <block type="logic_operation" id="^P4of3=v!.qLEb[:oS#V">
+                                <field name="OP">AND</field>
+                                <value name="A">
+                                  <block type="math_compare" id="3?;]pzZeukw7?nZw|JYQ">
+                                    <field name="OP">NEQ</field>
+                                    <value name="A">
+                                      <block type="lexical_variable_get" id=";.QPELICJWp6aB(B0;*_">
+                                        <field name="VAR">global last_lat</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="+){H(:{eILXu1Ey8Q}R$">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_compare" id="#eS4egT_+995oTWdrIm/">
+                                    <field name="OP">NEQ</field>
+                                    <value name="A">
+                                      <block type="lexical_variable_get" id="t%$1.#uDmM8m*BGF,TqE">
+                                        <field name="VAR">global last_long</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="ux-!Jl%KH!Mid_zlOqas">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="SymvLdOarj#]~v0}`o38" inline="false">
+                                <mutation name="angle_as">
+                                  <arg name="lat1"></arg>
+                                  <arg name="lat2"></arg>
+                                  <arg name="long1"></arg>
+                                  <arg name="long2"></arg>
+                                </mutation>
+                                <field name="PROCNAME">angle_as</field>
+                                <value name="ARG0">
+                                  <block type="lexical_variable_get" id="u~rO2m`|`}ngJmyy0a/g">
+                                    <field name="VAR">global last_lat</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="lexical_variable_get" id="H*56SC-.0/PILR?-;:^*">
+                                    <field name="VAR">global latitude</field>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block type="lexical_variable_get" id=",SJVj%:UG4KFJ|HJ/~Fv">
+                                    <field name="VAR">global last_long</field>
+                                  </block>
+                                </value>
+                                <value name="ARG3">
+                                  <block type="lexical_variable_get" id=";nAqZC`]3Q+^:o=%8nI=">
+                                    <field name="VAR">global Longitude</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="procedures_callnoreturn" id="+j4U_}Q6XHm`h(uZ,Jb#" inline="false">
+                                    <mutation name="radius_ac">
+                                      <arg name="lat"></arg>
+                                    </mutation>
+                                    <field name="PROCNAME">radius_ac</field>
+                                    <value name="ARG0">
+                                      <block type="lexical_variable_get" id="9x|+8atGYKu{GcmR%eDG">
+                                        <field name="VAR">global latitude</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="controls_if" id="$*YSM5LLw`P#/#].m(yX">
+                                        <value name="IF0">
+                                          <block type="math_compare" id="I9,K`r*^%e,k=x-$_I4F">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="lexical_variable_get" id="//De{8[hQI]WOAz}8s|]">
+                                                <field name="VAR">global value_Button</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="}wdGPXmeFO5TKkRDk4()">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="lexical_variable_set" id="%dY5sQ^,7ud1-ug!=KmP">
+                                            <field name="VAR">global Total_dist</field>
+                                            <value name="VALUE">
+                                              <block type="math_add" id="nS]*[HH8TUF{L;%@.FQw">
+                                                <mutation items="2"></mutation>
+                                                <value name="NUM0">
+                                                  <block type="lexical_variable_get" id="D^BZ2zJFLSu?l(,in=W9">
+                                                    <field name="VAR">global Total_dist</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM1">
+                                                  <block type="math_multiply" id="A#=!WYdm_*,757]S)V1E">
+                                                    <mutation items="2"></mutation>
+                                                    <value name="NUM0">
+                                                      <block type="math_add" id="agU7~5FlOJS%?sO}J70/">
+                                                        <mutation items="2"></mutation>
+                                                        <value name="NUM0">
+                                                          <block type="lexical_variable_get" id="``S:T%:L!Q+x}=vwFc=k">
+                                                            <field name="VAR">global ac_radius</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="NUM1">
+                                                          <block type="lexical_variable_get" id="AI)v,r/$$|ovO.G[I3xp">
+                                                            <mutation>
+                                                              <eventparam name="altitude"></eventparam>
+                                                            </mutation>
+                                                            <field name="VAR">altitude</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM1">
+                                                      <block type="lexical_variable_get" id="@ZJ2Z68fvcRtOKW]C]P7">
+                                                        <field name="VAR">global temp_distance</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="lexical_variable_set" id="y~zzU@{p8mU7Fk~FORDr">
+                                <field name="VAR">global last_lat</field>
+                                <value name="VALUE">
+                                  <block type="lexical_variable_get" id="X:Tre5g9faoLhV`O`-pK">
+                                    <field name="VAR">global latitude</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lexical_variable_set" id="Q05~.(9e4LQtDSQr+y^L">
+                                    <field name="VAR">global last_long</field>
+                                    <value name="VALUE">
+                                      <block type="lexical_variable_get" id="wBWUZhAOC_c+SZ2rOC8{">
+                                        <field name="VAR">global Longitude</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="lexical_variable_set" id="uSTWYknoa++oIXxS^aGD">
+                                        <field name="VAR">global loops</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="bRGAd%=a+IXRVG17t*Dm">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="lexical_variable_set" id="3`hp{OIg!jK-S|nJhObv">
+                            <field name="VAR">global loops</field>
+                            <value name="VALUE">
+                              <block type="math_add" id="9gBH0Bp3Cx3OO$%!#ggf">
+                                <mutation items="2"></mutation>
+                                <value name="NUM0">
+                                  <block type="lexical_variable_get" id="D9j6e!whyx5X4FY?ehK|">
+                                    <field name="VAR">global loops</field>
+                                  </block>
+                                </value>
+                                <value name="NUM1">
+                                  <block type="math_number" id="BatS(W;*ZT!1,Kczb/oM">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="TY0n@g2VOgO:2b?mX)|^" x="440" y="806">
+    <field name="NAME">loops</field>
+    <value name="VALUE">
+      <block type="math_number" id="c,OPgLY2vOQ$,0XX4r;[">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="ky{gN,*R+]r,CB|~a}Tx" x="46" y="1502">
+    <mutation>
+      <arg name="lat1"></arg>
+      <arg name="lat2"></arg>
+      <arg name="long1"></arg>
+      <arg name="long2"></arg>
+    </mutation>
+    <field name="NAME">angle_as</field>
+    <field name="VAR0">lat1</field>
+    <field name="VAR1">lat2</field>
+    <field name="VAR2">long1</field>
+    <field name="VAR3">long2</field>
+    <statement name="STACK">
+      <block type="lexical_variable_set" id="PqY1NZtFYmo69@axBo=v">
+        <field name="VAR">global temp_distance</field>
+        <value name="VALUE">
+          <block type="math_cos" id="sqA4M-qOO*RWr#]I{z/?">
+            <field name="OP">COS</field>
+            <value name="NUM">
+              <block type="math_subtract" id="v]SSdtS}a^=p/NwgabO,">
+                <value name="A">
+                  <block type="lexical_variable_get" id="beE|mg)8l7#9?%i.Mv+8">
+                    <field name="VAR">long1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="lexical_variable_get" id="9Tt)M%P,I:QuK9pfZ$VV">
+                    <field name="VAR">long2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="j[P!}6IL!YpG;R(~5}}m">
+            <field name="VAR">global temp_distance</field>
+            <value name="VALUE">
+              <block type="math_multiply" id="pbvL#R$W=cK5?bcMihu9">
+                <mutation items="3"></mutation>
+                <value name="NUM0">
+                  <block type="lexical_variable_get" id="a[/G6vi1y~0Z0$Ldf|oy">
+                    <field name="VAR">global temp_distance</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="math_cos" id="Z1;K?n)v=_-GNq:BF`B}">
+                    <field name="OP">COS</field>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="546QwRP^Q`2w?TZ`oes}">
+                        <field name="VAR">lat1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="NUM2">
+                  <block type="math_cos" id="A**2TCDt*C)`=|MP_!4A">
+                    <field name="OP">COS</field>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="L:,#qFq.FZivfYwCAz];">
+                        <field name="VAR">lat2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="lexical_variable_set" id="+)_d961`8eV4~k_Ly.+#">
+                <field name="VAR">global temp_distance</field>
+                <value name="VALUE">
+                  <block type="math_add" id=":/!ExJnu*Bbbnze;iI4R">
+                    <mutation items="2"></mutation>
+                    <value name="NUM0">
+                      <block type="lexical_variable_get" id="*/n;bvEe17pX#Ig;`sR%">
+                        <field name="VAR">global temp_distance</field>
+                      </block>
+                    </value>
+                    <value name="NUM1">
+                      <block type="math_multiply" id="f*DI]fGaSvNKB}WV/EPt">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="math_trig" id="m$DE7wFk:Zn9po1:qKiY">
+                            <field name="OP">SIN</field>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="/*%E`y6TXbS/ZCR|ivE6">
+                                <field name="VAR">lat1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_trig" id="[lvvtuo:I,gQ=qcW;H!$">
+                            <field name="OP">SIN</field>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="}j]y(reBT/4+Zo~f=0IK">
+                                <field name="VAR">lat2</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="x`xvk;%.b^oLt95M@VB.">
+                    <field name="VAR">global temp_distance</field>
+                    <value name="VALUE">
+                      <block type="math_convert_angles" id=".Ha^][mQ@h@-1_KZ-jy@">
+                        <field name="OP">DEGREES_TO_RADIANS</field>
+                        <value name="NUM">
+                          <block type="math_trig" id="psD5,z$D^MWBVj$]Qd2$">
+                            <field name="OP">ACOS</field>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="k,4=;CA#4q@Td]1V9ImC">
+                                <field name="VAR">global temp_distance</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="L4,y1IVEOem3tr8kWUw!" x="46" y="1700">
+    <mutation>
+      <arg name="lat"></arg>
+    </mutation>
+    <field name="NAME">radius_ac</field>
+    <field name="VAR0">lat</field>
+    <statement name="STACK">
+      <block type="lexical_variable_set" id="*x]J2cGX/?@6Sj]zUslK">
+        <field name="VAR">global ac_radius</field>
+        <value name="VALUE">
+          <block type="math_division" id=":St@$dGzc-`+ZQz1;Q-{">
+            <value name="A">
+              <block type="lexical_variable_get" id="=~Q~@+[co?)cSFJ~k=h-">
+                <field name="VAR">global E_radius_m</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_single" id="uf$q1R]b!.9}[FpWt68^">
+                <field name="OP">ROOT</field>
+                <value name="NUM">
+                  <block type="math_add" id="@le#x+^=%Yvu+wvIc6yE">
+                    <mutation items="2"></mutation>
+                    <value name="NUM0">
+                      <block type="procedures_callreturn" id="1)`^!tmW#Nn3KfGydF2{" inline="false">
+                        <mutation name="square">
+                          <arg name="x"></arg>
+                        </mutation>
+                        <field name="PROCNAME">square</field>
+                        <value name="ARG0">
+                          <block type="math_cos" id="NoZTpGNJXeWJL~s#cs!s">
+                            <field name="OP">COS</field>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="VWi,aAhNT+(f|O`ip5x}">
+                                <field name="VAR">lat</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NUM1">
+                      <block type="math_multiply" id="gkE-zrba{04u-+,K*.C7">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="lexical_variable_get" id="f^b~dFGLvU%x@JVrm1C[">
+                            <field name="VAR">global ratio_radius</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="procedures_callreturn" id="9WSw1N;~kAAqW8NGPpOa" inline="false">
+                            <mutation name="square">
+                              <arg name="x"></arg>
+                            </mutation>
+                            <field name="PROCNAME">square</field>
+                            <value name="ARG0">
+                              <block type="math_cos" id="~EQ.#,gMYYkMH{9f5*2;">
+                                <field name="OP">SIN</field>
+                                <value name="NUM">
+                                  <block type="lexical_variable_get" id="b{~#f{Gx}fWk:wZkvoEZ">
+                                    <field name="VAR">lat</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="fJGUk%9[,onC|aoUhegi" x="45" y="1858">
+    <mutation component_type="Clock" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="controls_if" id="BnL3($*wxF:Gex6drI~m">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="component_set_get" id="o*Hc;]m]3BA(nr+~$N(n">
+            <mutation component_type="LocationSensor" set_or_get="get" property_name="Enabled" is_generic="false" instance_name="LocationSensor1"></mutation>
+            <field name="COMPONENT_SELECTOR">LocationSensor1</field>
+            <field name="PROP">Enabled</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="m:`~9^GB`l$Sw0Li+z=|">
+            <mutation component_type="Button" set_or_get="set" property_name="Enabled" is_generic="false" instance_name="go"></mutation>
+            <field name="COMPONENT_SELECTOR">go</field>
+            <field name="PROP">Enabled</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="JKc]2V:1xlKlbvAuupy7">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="/Hkx^]#V-eG3JFqiWzC#">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="math_compare" id="?kHizPik?.1WO3-{0*Np">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="lexical_variable_get" id="X}1k8IX%,Leb)p@;pLAd">
+                        <field name="VAR">global value_Button</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="_PB;hh+nhlcnghOkNcYa">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="AwQ[d,r@6AH/F:kq%jxD">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="speed"></mutation>
+                    <field name="COMPONENT_SELECTOR">speed</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get" id="ZWoWul@64}@[4D5l5ov8">
+                        <field name="VAR">global Speed</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="sAfHF0Qb*.1P.dL5TE!U">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Longitude_text"></mutation>
+                        <field name="COMPONENT_SELECTOR">Longitude_text</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="Kw%{MGyKNomw53-1@C=I">
+                            <field name="VAR">global Longitude</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id=".n;t;B~]xwYqq6j|D4?3">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Latitude_text"></mutation>
+                            <field name="COMPONENT_SELECTOR">Latitude_text</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id="Vww5QrG^!vV[q@+XCDK{">
+                                <field name="VAR">global latitude</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="zDlN8]GBqR@$A3,w@EU=">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Accuracy_text"></mutation>
+                                <field name="COMPONENT_SELECTOR">Accuracy_text</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lexical_variable_get" id="%d;aD:V9thit!r;b#[IO">
+                                    <field name="VAR">global Accuracy</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="~=`W^Yf0q|?S,Rbz@At}">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="total_dist"></mutation>
+                                    <field name="COMPONENT_SELECTOR">total_dist</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lexical_variable_get" id="zZbb?sSiIblKz^z?kB(s">
+                                        <field name="VAR">global Total_dist</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="controls_if" id="]0=f=-V6u-ODp4de0V,m">
+                                        <mutation else="1"></mutation>
+                                        <value name="IF0">
+                                          <block type="math_compare" id="Ay[WpF}4VqQ5KW^-Jg^]">
+                                            <field name="OP">LT</field>
+                                            <value name="A">
+                                              <block type="component_set_get" id=")J3VF$ya:*?gw`tuS3B-">
+                                                <mutation component_type="Slider" set_or_get="get" property_name="ThumbPosition" is_generic="false" instance_name="speed_limit"></mutation>
+                                                <field name="COMPONENT_SELECTOR">speed_limit</field>
+                                                <field name="PROP">ThumbPosition</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="component_set_get" id="a1@3nad;UV+C2OfM:kUC">
+                                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="speed"></mutation>
+                                                <field name="COMPONENT_SELECTOR">speed</field>
+                                                <field name="PROP">Text</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="component_method" id="uIECYYRMi!xx-C=v!X6.">
+                                            <mutation component_type="Sound" method_name="Play" is_generic="false" instance_name="Sound1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Sound1</field>
+                                          </block>
+                                        </statement>
+                                        <statement name="ELSE">
+                                          <block type="component_method" id="b$jQ:hjY7cRxg[t^vAJF">
+                                            <mutation component_type="Sound" method_name="Stop" is_generic="false" instance_name="Sound1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Sound1</field>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_set_get" id="`bU3~{sPcnR8.^+g,gG[">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="speed"></mutation>
+                    <field name="COMPONENT_SELECTOR">speed</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="}@v^UH!jo:Oz5tJt=vs[">
+                        <field name="TEXT">------------</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="g0Q7h6oQ$`@q:F:CD~E(">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Longitude_text"></mutation>
+                        <field name="COMPONENT_SELECTOR">Longitude_text</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="P!aD|Kx=?RbA#O4Q-b,E">
+                            <field name="TEXT"></field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="Dyin81T$2{*n}V2F}t@C">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Latitude_text"></mutation>
+                            <field name="COMPONENT_SELECTOR">Latitude_text</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="text" id="}pUY93*Vp^N_dGv{XTR|">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="q.},vy!Y5mUz7ClsI%NI">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Accuracy_text"></mutation>
+                                <field name="COMPONENT_SELECTOR">Accuracy_text</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="KC:/a3JEd*[sk,CD`#1h">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="component_set_get" id="cBtDNX8AmL]_2bPrN$$k">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="limit_speed_text"></mutation>
+                    <field name="COMPONENT_SELECTOR">limit_speed_text</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="component_set_get" id="=e1$nR`l2IvCg(+4L!@}">
+                        <mutation component_type="Slider" set_or_get="get" property_name="ThumbPosition" is_generic="false" instance_name="speed_limit"></mutation>
+                        <field name="COMPONENT_SELECTOR">speed_limit</field>
+                        <field name="PROP">ThumbPosition</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_if" id="X:2NNw2dH!kF{@%,wW3]">
+            <value name="IF0">
+              <block type="math_compare" id="eRi4*}Z.w.c~K^Q#:{jd">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id="G*WFS^p~p!SGbEuXomtj">
+                    <field name="VAR">global in_timer</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="qfc!lf}}HOC$,[h?LChv">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_method" id="VkCu1?()QV@/CJQxMIKR">
+                <mutation component_type="Notifier" method_name="ShowTextDialog" is_generic="false" instance_name="gps_turn_on"></mutation>
+                <field name="COMPONENT_SELECTOR">gps_turn_on</field>
+                <value name="ARG0">
+                  <block type="text" id="a_0F,iA^T}NhI/Yn:oNk">
+                    <field name="TEXT">Turn ON your mobile GPS from mobile setting</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="4.D2Y6=/Z!dX/Ws#.9Je">
+                    <field name="TEXT">MindTheSPEED</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block type="logic_boolean" id="#O~tl/oY,ZsZ5kojpFKZ">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="H3x%$~C3RJjK-,7[xAq0">
+                <value name="IF0">
+                  <block type="math_compare" id="{bg]a@@WQdsr%j~35$^~">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="lexical_variable_get" id="sl(K^[DR!3NCyB==[s5,">
+                        <field name="VAR">global in_timer</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="EyW(;+|G@?^:n+SFx,~w">
+                        <field name="NUM">60</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="lexical_variable_set" id="V-2wPHPACf+*#ypPj,h|">
+                    <field name="VAR">global in_timer</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="Vg_c$]MLDhk?GT,lUCt_">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="lexical_variable_set" id="EYtPi.4Q?H|ed2w,gB;1">
+                    <field name="VAR">global in_timer</field>
+                    <value name="VALUE">
+                      <block type="math_add" id="=x[sX7zY^I1dRQxz1q)E">
+                        <mutation items="2"></mutation>
+                        <value name="NUM0">
+                          <block type="lexical_variable_get" id="~5Duyh];bUO;,Ov,2stm">
+                            <field name="VAR">global in_timer</field>
+                          </block>
+                        </value>
+                        <value name="NUM1">
+                          <block type="math_number" id="k2Y)NUI3ocH2x:Th^,U1">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="yYbR`017v55w_pmS0J41">
+                        <mutation component_type="Button" set_or_get="set" property_name="Enabled" is_generic="false" instance_name="go"></mutation>
+                        <field name="COMPONENT_SELECTOR">go</field>
+                        <field name="PROP">Enabled</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="hg(jCSguVNmYP4?ejK,l">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="/O@}`)(i,C,(LGL_/#oc">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="speed"></mutation>
+                            <field name="COMPONENT_SELECTOR">speed</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="text" id="x]9Nbd9xSC36LNV.H]c_">
+                                <field name="TEXT">------------</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="5h5NgfvS5OqW_Q@W(`fd">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Longitude_text"></mutation>
+                                <field name="COMPONENT_SELECTOR">Longitude_text</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id=")~jD?)R6^!3tSHUxrci9">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="f5ZTcOUHCz$8a{e#n;cl">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Latitude_text"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Latitude_text</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="H}$R:4k)~^:y;|7S}UDP">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="a_dBmFsR1pU!?j*[^fB9">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Accuracy_text"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Accuracy_text</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="C{fOz%S+r}PQEmw}@(tQ">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="GGSfP^i^83wDBWZW=ZKv">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="limit_speed_text"></mutation>
+                                            <field name="COMPONENT_SELECTOR">limit_speed_text</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="component_set_get" id="B;:[D^Jmjl8).q[GA8-G">
+                                                <mutation component_type="Slider" set_or_get="get" property_name="ThumbPosition" is_generic="false" instance_name="speed_limit"></mutation>
+                                                <field name="COMPONENT_SELECTOR">speed_limit</field>
+                                                <field name="PROP">ThumbPosition</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

@@ -1,0 +1,175 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="WerA}?^vfYC:y`BG-CZA" x="4" y="42">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="K`jKU.;1RzP0sOQtmvnw">
+        <mutation component_type="Sound" method_name="Play" is_generic="false" instance_name="Sound1"></mutation>
+        <field name="COMPONENT_SELECTOR">Sound1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="45x(ye^)m4;+nxuMgw;:" x="13" y="43">
+    <field name="NAME">procedure</field>
+  </block>
+  <block type="global_declaration" id="WYxZA~Iux:C}ILetJAPW" x="265" y="42">
+    <field name="NAME">count</field>
+    <value name="VALUE">
+      <block type="math_number" id=";s(Y0?;;X?/`HjMoaZqm">
+        <field name="NUM">2</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="2`|B@)%bpZa~,,wB3#.7" x="6" y="138">
+    <mutation component_type="Clock" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id=")=$=^FT/YpRhsa$~wf1]">
+        <field name="VAR">global count</field>
+        <value name="VALUE">
+          <block type="math_subtract" id=".{L5H|Z#VPLIauFnC{Xx">
+            <value name="A">
+              <block type="lexical_variable_get" id="o?alb/aJ0aP!.W31S:-K">
+                <field name="VAR">global count</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="NIfC]%`|siJfzhO7TB/6">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="TXO%2xt+AhIoGe;.@k@:">
+            <value name="IF0">
+              <block type="logic_compare" id="L4L@|9g5KIu*Q:R,Rhk-">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id="tB0u[lXGh{/*JSN5?r_g">
+                    <field name="VAR">global count</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="hZ/H-5-CSHuk:+68)~ms">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_method" id="LB(Ln!tp~KJlKi1[N|I1">
+                <mutation component_type="Sound" method_name="Stop" is_generic="false" instance_name="Sound1"></mutation>
+                <field name="COMPONENT_SELECTOR">Sound1</field>
+                <next>
+                  <block type="procedures_callnoreturn" id="qcN#0JFRe|k]IPFhBrjF" inline="false">
+                    <mutation name="procedure2">
+                      <arg name="screen"></arg>
+                    </mutation>
+                    <field name="PROCNAME">procedure2</field>
+                    <value name="ARG0">
+                      <block type="text" id="y1;zZ.v:7jvZI]zk@9kA">
+                        <field name="TEXT">MainMenu</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="gg%T(@MC_0Bx+8:mPKVP" x="7" y="360">
+    <mutation>
+      <arg name="screen"></arg>
+    </mutation>
+    <field name="NAME">procedure2</field>
+    <field name="VAR0">screen</field>
+    <statement name="STACK">
+      <block type="controls_if" id="lnE7F4^7bBL.0YZ6|C:P">
+        <value name="IF0">
+          <block type="logic_boolean" id="E`IPT|x%M9;Ucd%W`;!;">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="_M?*b{ihb38,RiLTz`mr">
+            <value name="SCREEN">
+              <block type="lexical_variable_get" id="cal{dEJ:)qBLNSsBX?fy">
+                <field name="VAR">screen</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="n|-iuN:+pO+`Y8$m1]a2"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="QC=v/1Mqe%y:gYM?!4`j" x="9" y="519">
+    <mutation component_type="Form" instance_name="Screen1" event_name="ErrorOccurred"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="bX5%~S$ojzZ3wQ~I1pvo">
+        <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text_join" id="p@EYecOiHv@Cmt*aq/rd">
+            <mutation items="7"></mutation>
+            <value name="ADD0">
+              <block type="lexical_variable_get" id="G_LMz{|xJG%MJ.={=rHd">
+                <mutation>
+                  <eventparam name="component"></eventparam>
+                </mutation>
+                <field name="VAR">component</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="7-[25ypNi1JZfMR|%oLM">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="lexical_variable_get" id="TecZRAS$(.L`h@1EVr;$">
+                <mutation>
+                  <eventparam name="functionName"></eventparam>
+                </mutation>
+                <field name="VAR">functionName</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id=":?X]%0]n!oqecFB`QcP3">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="lexical_variable_get" id="M%6q*7+ZGEyGm8lPzLe=">
+                <mutation>
+                  <eventparam name="errorNumber"></eventparam>
+                </mutation>
+                <field name="VAR">errorNumber</field>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="text" id="/cQpTC8m^fFl43v`QpNz">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="lexical_variable_get" id="eaKV/yUc1OvcVxPzbt:*">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

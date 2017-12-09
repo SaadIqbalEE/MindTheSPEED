@@ -1,0 +1,110 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="TliGD0tWf;Vw(t55X]L/" x="32" y="35">
+    <mutation>
+      <arg name="screen"></arg>
+    </mutation>
+    <field name="NAME">procedure</field>
+    <field name="VAR0">screen</field>
+    <statement name="STACK">
+      <block type="controls_if" id="3F:To:~dW:oOfP?RKVdk">
+        <value name="IF0">
+          <block type="logic_boolean" id="oB}Rz`RaH%iJa4?aCKZN">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="Z.4OJkHBz?vwUbu8!2dI">
+            <value name="SCREEN">
+              <block type="lexical_variable_get" id="oOS$0].a7)Uqk*ozQt)M">
+                <field name="VAR">screen</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="j^tg.P~KuGHx(Z{CV+}("></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="hZ7|%IH:e:Yd[P.WUJO*" x="36" y="202">
+    <mutation component_type="Button" instance_name="Back" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Back</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="]x58=yvD[WdkewG7(vxZ" inline="false">
+        <mutation name="procedure">
+          <arg name="screen"></arg>
+        </mutation>
+        <field name="PROCNAME">procedure</field>
+        <value name="ARG0">
+          <block type="text" id="I_ai5.ZnOx,A;V=x%N!e">
+            <field name="TEXT">MainMenu</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="~ZAk^Epj?ub?sp!?z0Wb" x="31" y="317">
+    <mutation component_type="Form" instance_name="Credits" event_name="ErrorOccurred"></mutation>
+    <field name="COMPONENT_SELECTOR">Credits</field>
+    <statement name="DO">
+      <block type="component_method" id="9s6]#sk^r;T8b%x^4[CF">
+        <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text_join" id="-B?LIZ**%r+0|JBt~cZ`">
+            <mutation items="7"></mutation>
+            <value name="ADD0">
+              <block type="lexical_variable_get" id="r88--v=0i/a|j|bqUWI6">
+                <mutation>
+                  <eventparam name="component"></eventparam>
+                </mutation>
+                <field name="VAR">component</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="QqO.dHFrh7yiC+els!J[">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="lexical_variable_get" id="K3xj]z9pY+Eg2zIcO!2b">
+                <mutation>
+                  <eventparam name="functionName"></eventparam>
+                </mutation>
+                <field name="VAR">functionName</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id="zP-j::2*M3mC4t4/E,zy">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="lexical_variable_get" id="~ps/Lt]67~l4+L+_yI+y">
+                <mutation>
+                  <eventparam name="errorNumber"></eventparam>
+                </mutation>
+                <field name="VAR">errorNumber</field>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="text" id="?szGHQXO)a_)p|MF!ay|">
+                <field name="TEXT">,</field>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="lexical_variable_get" id="vH%FmmMgUBUlP|]/50/8">
+                <mutation>
+                  <eventparam name="message"></eventparam>
+                </mutation>
+                <field name="VAR">message</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>
